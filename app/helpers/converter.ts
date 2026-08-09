@@ -19,3 +19,10 @@ export const formatBrazilianDate = (date: Date): string => {
     year: "numeric",
   });
 };
+
+export const toPatientDate = (value: Date | string | null | undefined): Date => {
+  if (!value) {
+    return new Date(0);
+  }
+  return value instanceof Date ? value : new Date(value);
+};

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "tsx app/index.ts",
+    "test": "tsx --test \"tests/**/*.test.ts\""
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
     "@types/node": "^26.1.2",
     "tsx": "^4.23.5",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "ts-pattern": "^5.9.0"
   }
 }

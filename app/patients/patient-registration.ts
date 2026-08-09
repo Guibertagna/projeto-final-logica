@@ -28,7 +28,7 @@ const patientRegistration = (): Promise<Patient> => {
                                     return;
                                 }
                                 const askPriority = (): void => {
-                                    rl.question("Digite a prioridade do paciente entre 1 e 10: ", (priority) => {
+                                    rl.question("Digite a prioridade do paciente 1-3 baixa, 4-6 média, 7-10 alta: ", (priority) => {
                                         if (!isValidPriority(priority)) {
                                             console.log("Prioridade inválida. Digite um número inteiro entre 1 e 10.");
                                             askPriority();
@@ -43,9 +43,11 @@ const patientRegistration = (): Promise<Patient> => {
                                             isAttended: false
                                         };
                                         rl.close();
-                                        console.log("Paciente registrado");
-                                        addPatient(patient);
-                                        resolve(patient);
+                                        console.log("Salvando paciente...");
+                                        addPatient(patient).then(() => {
+                                            console.log("Paciente registrado");
+                                            resolve(patient);
+                                        });
                                     });
                                 }
                                 askPriority();

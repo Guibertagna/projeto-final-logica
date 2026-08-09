@@ -2,7 +2,7 @@ import * as readline from "node:readline";
 import { stdin as input, stdout as output } from "node:process";
 import { Options } from "./types";
 
-export const options: Options[] = [
+export const mainOptions: Options[] = [
     {
         label: "Cadastrar paciente",
         description: "Cadastra um novo paciente",
@@ -14,49 +14,44 @@ export const options: Options[] = [
         id: 2
     },
     {
-        label: "Listar pacientes",
+        label: "Listar todos os pacientes",
         description: "Lista todos os pacientes",
         id: 3
     },
     {
-        label: "Atender próximo paciente",
-        description: "Atende o próximo paciente",
+        label: "Atender próximo paciente conforme prioridade",
+        description: "Atende o próximo paciente conforme prioridade",
         id: 4
-    },
-    {
-        label: "Alterar prioridade",
-        description: "Altera a prioridade de um paciente",
-        id: 5
     },
     {
         label: "Estatísticas",
         description: "Exibe as estatísticas do sistema",
-        id: 6
+        id: 5
     },
     {
         label: "Buscar paciente",
         description: "Busca um paciente pelo nome",
-        id: 7
+        id: 6
     },
     {
         label: "Sair",
         description: "Sai do sistema",
-        id: 8
+        id: 7
     }
 ]
 
-export const displayOptions = (): Promise<number> => {
+export const displayMainOptions = (): Promise<number> => {
     const rl = readline.createInterface({ input, output });
     console.log("Bem-vindo ao sistema de atendimento do UPA");
     console.log("Selecione uma opção:");
-    options.forEach((option) => {
+    mainOptions.forEach((option: Options) => {
         console.log(`${option.id} - ${option.label}`);
     });
 
-   return new Promise((resolve) => {
-    rl.question("Digite o número da opção: ", (escolha) => {
-        resolve(Number(escolha));
-        rl.close();
+    return new Promise((resolve) => {
+        rl.question("Digite o número da opção: ", (escolha) => {
+            resolve(Number(escolha));
+            rl.close();
+        });
     });
-   });
 }

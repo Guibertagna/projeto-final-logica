@@ -1,28 +1,25 @@
-import path from "node:path";
-import * as fs from "node:fs";
+import { fetchPatients, savePatients } from "../api/patient-api";
 import { Patient } from "../types";
 
-export const addPatient = (patient: Patient): void => {
-    const filePath = path.join(__dirname, "../data/patients.json");
-    let patients: Patient[] = [];
-    if (fs.existsSync(filePath)) {
-        const content = fs.readFileSync(filePath, "utf-8").trim();
-        if (content) {
-            patients = JSON.parse(content);
-        }
-    }
-    patients.push(patient);
-    fs.writeFileSync(filePath, JSON.stringify(patients, null, 2));
-}
+export const getPatients = async (): Promise<Patient[]> => {
+    const response = await fetchPatients();
+    return response.data;
+};
 
-export const getPatients = (): Patient[] => {
-    const filePath = path.join(__dirname, "../data/patients.json");
-    let patients: Patient[] = [];
-    if (fs.existsSync(filePath)) {
-        const content = fs.readFileSync(filePath, "utf-8").trim();
-        if (content) {
-            patients = JSON.parse(content);
-        }
+export const addPatient = async (patient: Patient): Promise<void> => {
+    const patients = await getPatients();
+    patients.push(patient);
+    await savePatients(patients);
+};
+
+export const updatePatient = async (index: number, updates: Partial<Patient>): Promise<Patient | null> => {
+    const patients = await getPatients();
+
+    if (index < 0 || index >= patients.length) {
+        return null;
     }
-    return patients;
-}
+
+    patients[index] = { ...patients[index], ...updates };
+    await savePatients(patients);
+    return patients[index];
+};

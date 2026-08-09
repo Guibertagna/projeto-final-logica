@@ -17,3 +17,7 @@ export const isValidPriority = (priority: string): boolean => {
   const number = Number(priority);
   return number >= 1 && number <= 10;
 };
+
+export const isValidId = (id: number, length: number): boolean => {
+  return Number.isInteger(id) && id >= 1 && id <= length;
+};
