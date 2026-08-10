@@ -1,162 +1,85 @@
 [
   {
-    "name": "joao da silva",
-    "age": 54,
+    "name": "Maria Oliveira Santos",
+    "age": 67,
     "symptoms": [
-      "teste",
-      " teste2",
-      " teste3",
-      " teste4"
+      "dor no peito",
+      "falta de ar",
+      "sudorese"
     ],
-    "arrivalDate": "1970-01-01T00:00:00.000Z",
-    "priority": 20,
+    "arrivalDate": "2026-03-12T08:15:00.000Z",
+    "priority": 9,
     "isAttended": true
   },
   {
-    "name": "joao",
-    "age": 31,
+    "name": "Carlos Eduardo Ferreira",
+    "age": 42,
     "symptoms": [
-      "suor",
-      " mijo"
+      "febre alta",
+      "dor de cabeça",
+      "náusea"
     ],
-    "arrivalDate": "1970-01-01T00:00:00.000Z",
-    "priority": 21,
+    "arrivalDate": "2026-03-12T09:30:00.000Z",
+    "priority": 6,
     "isAttended": true
   },
   {
-    "name": "André",
-    "age": 21,
+    "name": "Ana Beatriz Costa",
+    "age": 28,
     "symptoms": [
-      "altura",
-      "short"
+      "corte no braço",
+      "sangramento leve"
     ],
-    "arrivalDate": "2026-01-01T03:00:00.000Z",
-    "priority": 2,
+    "arrivalDate": "2026-03-12T10:05:00.000Z",
+    "priority": 4,
+    "isAttended": true
+  },
+  {
+    "name": "João Pedro Almeida",
+    "age": 55,
+    "symptoms": [
+      "dor abdominal intensa",
+      "vômito",
+      "febre"
+    ],
+    "arrivalDate": "2026-03-12T11:20:00.000Z",
+    "priority": 8,
     "isAttended": false
   },
   {
-    "name": "JOAO DA SILVA",
+    "name": "Fernanda Lima Rocha",
     "age": 34,
     "symptoms": [
-      "DOR NAS COSTAS"
+      "dor de garganta",
+      "tosse",
+      "coriza"
     ],
-    "arrivalDate": "2026-02-02T03:00:00.000Z",
-    "priority": 10,
-    "isAttended": true
-  },
-  {
-    "name": "JOAO",
-    "age": 43,
-    "symptoms": [
-      "DOR",
-      " FEBRE"
-    ],
-    "arrivalDate": "2026-02-02T03:00:00.000Z",
-    "priority": 20,
-    "isAttended": true
-  },
-  {
-    "name": "joao silva",
-    "age": 43,
-    "symptoms": [
-      "suor"
-    ],
-    "arrivalDate": "2024-01-31T03:00:00.000Z",
-    "priority": 2,
-    "isAttended": false
-  },
-  {
-    "name": "joao",
-    "age": 32,
-    "symptoms": [
-      "dor de cabeça",
-      " coriza",
-      " dor no corpo"
-    ],
-    "arrivalDate": "2026-01-20T03:00:00.000Z",
-    "priority": 5,
-    "isAttended": true
-  },
-  {
-    "name": "nome",
-    "age": null,
-    "symptoms": [
-      "joao",
-      "jose",
-      "artur",
-      ""
-    ],
-    "arrivalDate": "2026-01-30T03:00:00.000Z",
-    "priority": 2,
-    "isAttended": false
-  },
-  {
-    "name": "Joao da silva",
-    "age": 0,
-    "symptoms": [
-      "joao",
-      "carlos"
-    ],
-    "arrivalDate": "2020-01-29T03:00:00.000Z",
+    "arrivalDate": "2026-03-12T12:40:00.000Z",
     "priority": 3,
     "isAttended": false
   },
   {
-    "name": "joao",
-    "age": 19,
+    "name": "Roberto Souza Mendes",
+    "age": 71,
     "symptoms": [
-      "dor",
-      "amem",
-      "joao"
+      "tontura",
+      "pressão alta",
+      "visão turva"
     ],
-    "arrivalDate": "2020-03-10T03:00:00.000Z",
-    "priority": 10,
-    "isAttended": true
-  },
-  {
-    "name": "1",
-    "age": 1,
-    "symptoms": [
-      "1"
-    ],
-    "arrivalDate": "1111-11-11T03:06:28.000Z",
-    "priority": 1,
-    "isAttended": true
-  },
-  {
-    "name": "joao",
-    "age": 3,
-    "symptoms": [
-      "dor",
-      "dor",
-      "dor"
-    ],
-    "arrivalDate": "2003-01-20T02:00:00.000Z",
-    "priority": 1,
+    "arrivalDate": "2026-03-12T13:10:00.000Z",
+    "priority": 7,
     "isAttended": false
   },
   {
-    "name": "joao",
-    "age": 4,
+    "name": "Juliana Martins Pereira",
+    "age": 19,
     "symptoms": [
-      "dor",
-      "dor",
-      "dor"
+      "entorse no tornozelo",
+      "inchaço",
+      "dor ao caminhar"
     ],
-    "arrivalDate": "2003-01-10T02:00:00.000Z",
-    "priority": 10,
-    "isAttended": true
-  },
-  {
-    "name": "joao",
-    "age": 1,
-    "symptoms": [
-      "dor",
-      "dor dor",
-      ""
-    ],
-    "arrivalDate": "2026-01-10T03:00:00.000Z",
-    "priority": 1,
+    "arrivalDate": "2026-03-12T14:00:00.000Z",
+    "priority": 2,
     "isAttended": false
   }
 ]
